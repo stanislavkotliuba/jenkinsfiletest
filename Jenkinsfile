@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Deploy/Symlink/Composer install') {
+    stage('Deploy') {
       steps {
         sh '''export TEST1TEST="test1";
               export TEST2TEST="test2";
@@ -14,6 +14,11 @@ pipeline {
       steps {
         sh 'chmod +x ./hellokitty.sh'
         sh './hellokitty.sh'
+      }
+    }
+    stage('Activate release') {
+      steps {
+        sh 'echo "here will be activate release -tasks"'
       }
     }
   }
