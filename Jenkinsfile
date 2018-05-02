@@ -6,6 +6,7 @@ pipeline {
         sh '''export TEST1TEST="test1";
               export TEST2TEST="test2";
               echo $TEST1TEST;
+              echo $BUILD_TIMESTAMP;
               echo $TEST2TEST'''
       }
     }
