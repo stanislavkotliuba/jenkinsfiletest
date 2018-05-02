@@ -11,6 +11,7 @@ pipeline {
     }
     stage('Testing') {
       steps {
+        sh 'chmod +x ./hellokitty.sh'
         sh './hellokitty.sh'
       }
     }
